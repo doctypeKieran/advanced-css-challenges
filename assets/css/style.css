@@ -1,0 +1,477 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+/* CSS Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Element Styles */
+body {
+  background-color: rgb(0, 0, 51);
+  color: rgb(255, 255, 245);
+  font-family: "Montserrat", sans-serif;
+}
+
+h2,
+p {
+  margin: 1rem 0;
+}
+
+header {
+  margin: 3rem 0;
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+.text-center > p {
+  font-style: italic;
+}
+
+section {
+  margin: 5rem 0;
+  padding: 0 10rem;
+  display: grid;
+  place-items: center;
+}
+
+/* Class Styles */
+
+.center-items {
+  display: grid;
+  place-items: center;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  /* border: 3px solid rgb(87, 87, 255); */
+  border-radius: 10px;
+}
+.navbar a {
+  padding: 1.5rem 0;
+  background-color: white;
+  color: black;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.2rem;
+  transition: all 0.1s linear;
+}
+.navbar a:hover {
+  opacity: 0.6;
+}
+.navbar a:active {
+  filter: brightness(0.5);
+}
+.navbar a:nth-child(even) {
+  background-color: rgb(224, 224, 224);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* CHALLENGE STYLES */
+
+/* Dropdown Menu Styles */
+
+#dropdown-btn {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#dropdown-btn span {
+  font-size: 3rem;
+  color: rgb(0, 0, 51);
+}
+
+#dropdown-nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.dropdown-links-group {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.25rem;
+  position: absolute;
+  top: 40px;
+  width: 100%;
+}
+.dropdown-links-group a {
+  background-color: white;
+  color: rgb(0, 0, 51);
+  padding: 0.5rem 0;
+  width: 100%;
+  text-decoration: none;
+}
+
+/* Making the menu appear */
+
+#dropdown-nav:hover .dropdown-links-group {
+  display: flex;
+}
+
+/* Lightbox Gallery Styles */
+
+.lightbox-gallery {
+  margin: 3rem 0;
+  padding: 1rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 50vw;
+  gap: 2rem;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.lightbox-gallery img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.lightbox-gallery img:hover {
+  filter: brightness(0.5);
+}
+.lightbox-gallery img:active {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  z-index: 99;
+  top: 0;
+}
+
+/* Animated Loading Spinner Styles */
+
+.loading-spinner-container {
+  margin: 3rem 0;
+  display: grid;
+  place-items: center;
+}
+
+.loading-spinner {
+  height: 150px;
+  width: 150px;
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid rgb(7, 138, 199);
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom Radio Buttons and Checkboxes Styles */
+
+fieldset {
+  width: 350px;
+}
+legend {
+  background-color: rgb(0, 0, 32);
+  padding: 0.25rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+input[type="radio"] {
+  color: green;
+}
+
+.radio-btn-group {
+  margin: 1rem;
+}
+
+/* Grid-based Pricing Table Styles */
+
+.pricing-group > h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+.pricing-group > p {
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: normal;
+}
+.pricing-group > span {
+  font-style: italic;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+.pricing-group {
+  background-color: rgb(15, 15, 107);
+  padding: 3rem;
+}
+
+.pricing-table-container {
+  background-color: white;
+  margin: 3rem 0;
+  padding: 2rem;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 1400px;
+}
+
+.pricing-table-card {
+  background-color: white;
+  color: black;
+  padding: 1.5rem;
+  border: 1px solid black;
+  /* border-radius: 10px; */
+  box-shadow: -2px 2px 3px 2px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-top {
+  /* border-bottom: 1px solid black; */
+  width: 100%;
+  padding-bottom: 0.5rem;
+  height: 100px;
+}
+.card-top h3 {
+  font-size: 1.8rem;
+}
+.card-top p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.perks-list {
+  margin: 2rem 0;
+}
+.perks-list .perks-list-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-start;
+  font-size: 1.1rem;
+  font-style: normal;
+}
+.perks-list-item p {
+  font-weight: 600;
+}
+
+.price-box h4 {
+  font-size: 2rem;
+  margin: 0;
+}
+.price-box p {
+  font-size: 1.25rem;
+  margin: 0;
+  font-style: italic;
+}
+
+.sign-up-btn {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1rem;
+  /* height: 50px; */
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: white;
+  color: rgb(1, 99, 156);
+  border: 2px solid rgb(1, 99, 156);
+  border-radius: 10px;
+  transition: all 0.1s linear;
+  cursor: pointer;
+}
+.sign-up-btn:hover {
+  /* background-color: rgb(207, 207, 207); */
+  transform: scale(1.05);
+}
+.sign-up-btn:active {
+  transform: scale(0.95);
+}
+
+#best-price-card {
+  border: 4px solid rgb(1, 99, 156);
+  position: relative;
+  box-shadow: 0px 0px 4px 8px rgba(1, 99, 156, 0.6);
+}
+#best-price-card .best-price-badge {
+  position: absolute;
+  width: 80px;
+  right: 0;
+  top: 0;
+}
+#best-price-card .sign-up-btn {
+  background-color: rgb(1, 99, 156);
+  color: white;
+}
+
+/* Parallax Scrolling Effect Styles */
+
+/* Flexbox Calendar Styles */
+
+.calendar {
+  margin: 2rem 0;
+  background-color: white;
+  padding: 2rem;
+  color: black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.calendar-row {
+  display: flex;
+  align-items: center;
+}
+.calendar-cell {
+  background-color: rgb(223, 223, 223);
+  height: 80px;
+  width: 80px;
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#calendar-row-1 .calendar-cell {
+  background-color: white;
+}
+.calendar-row-even .calendar-cell:nth-child(even) {
+  background-color: rgb(182, 182, 182);
+}
+.calendar-row-odd .calendar-cell:nth-child(odd) {
+  background-color: rgb(182, 182, 182);
+}
+
+.not-this-month {
+  color: gray;
+  font-weight: normal;
+}
+
+/* Media Queries for Flexbox Calendar */
+@media screen and (max-width: 950px) {
+  #flexbox-calendar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #flexbox-calendar-section {
+    padding: 0 0.5rem;
+  }
+  .flexbox-calendar-navbar {
+    width: 90%;
+  }
+  .calendar {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .calendar-row h3 {
+    font-size: 1rem;
+  }
+  .calendar-cell {
+    height: 70px;
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  #flexbox-calendar-section > .text-center {
+    width: 100%;
+  }
+  .flexbox-calendar-navbar {
+    width: 75%;
+  }
+  .flexbox-calendar-navbar a {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .flexbox-calendar-heading {
+    font-size: 1rem;
+  }
+  .calendar-cell {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .calendar-cell {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+/* Animated Tooltip Styles */
+
+.tooltip-area {
+  width: 100%;
+  height: 50vh;
+  background-color: white;
+  display: grid;
+  place-items: center;
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.tooltip-box {
+  position: relative;
+  height: 50px;
+}
+.img-text-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  cursor: pointer;
+}
+
+.hidden-tooltip {
+  position: absolute;
+  top: -150px;
+  right: 0;
+  background-color: coral;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.tooltip-box:hover .hidden-tooltip {
+  opacity: 1;
+}
+.tooltip-img {
+  width: 100px;
+}
+/* CSS Accordion Challenge */
+
+/* Text Animation Challenge */
